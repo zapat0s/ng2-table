@@ -11,8 +11,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
           <th *ngFor="let column of columns" [ngTableSorting]="config" [column]="column" 
               (sortChanged)="onChangeTable($event)" ngClass="{{column.className || ''}}">
             {{column.title}}
-            <img *ngIf="config && column.sort === 'desc'" src="assets/open-iconic/svg/chevron-bottom.svg" class="float-right align-baseline">
-            <img *ngIf="config && column.sort === 'asc'" src="assets/open-iconic/svg/chevron-top.svg" class="float-right align-baseline">
+            <img *ngIf="config && column.sort === 'desc'" src="assets/open-iconic/svg/chevron-bottom.svg" alt="descending" class="float-right align-baseline table-icons">
+            <img *ngIf="config && column.sort === 'asc'" src="assets/open-iconic/svg/chevron-top.svg" alt="ascending" class="float-right align-baseline table-icons">
           </th>
         </tr>
       </thead>
